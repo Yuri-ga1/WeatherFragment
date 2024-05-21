@@ -1,3 +1,6 @@
 # Демонстрация работы
 
-[WeatherFragment.mp4](https://github.com/Yuri-ga1/WeatherFragment/blob/main/git_video/WeatherFragment.mp4)
+<video width="240" height="320" controls>
+  <source src="git_video/WeatherFragment.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
