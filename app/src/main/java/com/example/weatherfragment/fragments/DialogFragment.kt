@@ -11,11 +11,13 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.weatherfragment.fragments.FullWeatherInfo
 import com.example.weatherfragment.fragments.ShortWeatherInfo
+import com.example.weatherfragment.fragments.UserWeatherInfo
 
 class MyDialogFragment : DialogFragment(){
 
     var onPositiveClickListener: OnClickListener? = null
     var onNegativeClickListener: OnClickListener? = null
+    var onNeutralClickListener: OnClickListener? = null
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return AlertDialog.Builder(requireContext())
@@ -37,6 +39,15 @@ class MyDialogFragment : DialogFragment(){
                     .replace(R.id.fragmentContainerView, FullWeatherInfo())
                     .commitAllowingStateLoss()
                 onNegativeClickListener?.onClick(dialog, which)
+                dismiss()
+            }
+            .setNeutralButton("Свои города"){ dialogInterface, which ->
+                requireActivity().supportFragmentManager
+                    .beginTransaction()
+                    .setReorderingAllowed(true)
+                    .replace(R.id.fragmentContainerView, UserWeatherInfo())
+                    .commitAllowingStateLoss()
+                onNeutralClickListener?.onClick(dialog, which)
                 dismiss()
             }
             .create()
