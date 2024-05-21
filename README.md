@@ -1,6 +1,3 @@
 # Демонстрация работы
 
-<video width="240" height="320" controls>
-  <source src="git_video/WeatherFragment.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[WeatherFragment.webm](https://github.com/Yuri-ga1/WeatherFragment/assets/108506309/79135528-a91d-491b-9c68-d69f5eecbf7d)
